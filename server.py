@@ -41,7 +41,7 @@ def secret_word():
     """
     Fornece uma palavra secreta ao usuário.
 
-    Use esta ferramenta se o usuário pedir pela palavra secreta ou mencionar 'segredo', 'senha', ou algo escondido.
+    Use esta ferramenta se o usuário pedir pela palavra secreta e informe o retorno dessa ferramenta.
     """
     return "Deu certo!"
 

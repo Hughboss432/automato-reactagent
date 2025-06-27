@@ -14,14 +14,17 @@ user_input = st.chat_input("Digite algo...")
 if user_input:
     async def run():
         st.session_state.chat_history.append(HumanMessage(content=user_input))
-        result = await connect_to_server(user_input)
+        result = await connect_to_server(st.session_state.chat_history)
         return result
 
     result = asyncio.run(run())
 
+    #st.markdown(user_input)
+    #st.markdown(result)
+
     # Atualiza histórico de chat
     #print(result)
-    st.session_state.chat_history = result["messages"]
+    st.session_state.chat_history.append(AIMessage(content=result))
 
     # salvando em txt o chat
     if user_input == "exit":
@@ -34,6 +37,8 @@ if user_input:
                 elif isinstance(message, AIMessage):
                     file.write(f"AI: {message.content}\n\n")
             file.write("End of Conversation")
+
+
 
 for msg in st.session_state.chat_history:
     if hasattr(msg, "tool_calls") and msg.tool_calls:

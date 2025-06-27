@@ -12,7 +12,8 @@ class AgentState(TypedDict):
 
 async def model_node(state:AgentState) -> AgentState:
     system_prompt = SystemMessage(content=
-        "Você é um agente de IA útil chamado LPhantom que responde em português de forma clara e tem à sua disposição ferramentas de automação em Python."
+        "Você é um agente de IA útil chamado LPhantom que responde em português de forma clara e tem à sua disposição ferramentas de automação em Python." \
+        "**Apenas** chame uma ferramenta se o usuário pedir claramente para executar essa ação"
     )
     response = await state["model"].ainvoke([system_prompt] + state["messages"])
     return {
