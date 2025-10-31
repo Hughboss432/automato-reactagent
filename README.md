@@ -1,4 +1,4 @@
-# LPhantom – Quick Start Guide
+# Steamlit-test – Quick Start Guide
 
 Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e ferramentas MCP.
 
