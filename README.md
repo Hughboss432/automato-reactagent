@@ -1,6 +1,6 @@
 # Steamlit-test – Quick Start Guide
 
-Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e ferramentas MCP.
+Transforme o repositório em um app local que usa qwen3:1.7b via **Ollama** e ferramentas MCP.
 
 ---
 
@@ -17,10 +17,10 @@ Transforme o repositório em um app local que usa Llama 3.2 via **Ollama** e f
 
 ---
 
-## 1 ▪ Baixe o modelo Llama 3.2
+## 1 ▪ Baixe o modelo qwen3:1.7b
 
 ```bash
-ollama pull llama3.2
+ollama pull qwen3:1.7b
 ```
 
 Esperado: download de \~4 GB; uma vez concluído o modelo fica disponível localmente em `~/.ollama`.
