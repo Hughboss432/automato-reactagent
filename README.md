@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ---
 
 ## 3 ▪ Inicie o servidor de ferramentas MCP
-
+(Não é necessario atualmente)
 `server.py` expõe as ferramentas (add, subtract, multiply, secret\_word…).
 
 ```bash
