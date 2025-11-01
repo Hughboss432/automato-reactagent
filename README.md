@@ -98,4 +98,4 @@ Windows PowerShell:
 
 ## Licença
 
-Coloque aqui sua licença (MIT, Apache‑2.0, Proprietária etc.).
+MIT License
