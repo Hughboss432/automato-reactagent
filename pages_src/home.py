@@ -24,5 +24,7 @@ class HomePage:                                    # Home page
         # Listar produtos
             for i, row in df.iterrows():
                 st.write(f"- **{row['Nome']}** | R$ {row['Preço']:.2f} | Qtd: {row['Quantidade']}")
+                st.write(f"Descrição: {row['Descrição']}")
+
         except:
             st.warning('Algo deu errado, talvez algum caracter errado foi inserido.')

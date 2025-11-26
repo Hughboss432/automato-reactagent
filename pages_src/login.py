@@ -13,6 +13,7 @@ class LoginPage:                                    # Login page
                 st.session_state.page = "admin"
                 st.rerun()
             else:
-                st.session_state.user = "User"
-                st.session_state.page = "home"
-                st.rerun()
+                st.error('Usuário ou senha incorreto.')
+                #st.session_state.user = "User"
+                #st.session_state.page = "home"
+                #st.rerun()

@@ -25,7 +25,7 @@ class App:                                            # Class page controller
         if "btn_adm" not in st.session_state:         # bnt state
             st.session_state.btn_adm = "None"
         if "db" not in st.session_state:
-            st.session_state.db = pd.DataFrame(columns=["Nome", "Preço", "Quantidade"])
+            st.session_state.db = pd.DataFrame(columns=["Nome", "Preço", "Quantidade", "Descrição"])
 
         self.home = HomePage()
         self.chat = AIChatPage()

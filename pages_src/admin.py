@@ -35,9 +35,10 @@ class AdminPage:                                     # Super user page
             pdt_name = st.text_input("Nome do produto")
             pdt_price = st.number_input("Preço", min_value=0.0)
             pdt_num = st.number_input("Quantidade", min_value=1)
+            pdt_desc = st.text_input("Descrição do produto")
             if st.button("Salvar"):
                 new_pdt = novo_produto = pd.DataFrame(
-                    {"Nome": [pdt_name], "Preço": [pdt_price], "Quantidade": [pdt_num]}
+                    {"Nome": [pdt_name], "Preço": [pdt_price], "Quantidade": [pdt_num], "Descrição": [pdt_desc]}
                 )
                 st.session_state.db = pd.concat(
                     [st.session_state.db, new_pdt],
@@ -55,12 +56,14 @@ class AdminPage:                                     # Super user page
             )
             new_pdt_name = st.text_input("Novo nome", value=produto)
             new_pdt_price = st.number_input("Novo preço", min_value=0.0)
-            new_pdt_num = st.number_input("Quantidade", min_value=1)
+            new_pdt_num = st.number_input("Nova quantidade", min_value=1)
+            new_pdt_desc = st.text_input("Nova descrição")
             if st.button("Atualizar"):
                 idx = prod.index[prod["Nome"] == produto][0]
                 st.session_state.db.loc[idx, "Nome"] = new_pdt_name
                 st.session_state.db.loc[idx, "Preço"] = new_pdt_price
                 st.session_state.db.loc[idx, "Quantidade"] = new_pdt_num
+                st.session_state.db.loc[idx, "Descrição"] = new_pdt_desc
                 st.success(f"Produto '{new_pdt_name}' atualizado com sucesso!")
         elif st.session_state.btn_adm == "delete_btn":
             st.markdown("### 🗑️ Excluir produto")
