@@ -4,6 +4,8 @@ import asyncio
 
 class MqttTool:
     def __init__(self, broker="localhost", port=1883):
+        self.loop = asyncio.get_event_loop()
+
         self.client = mqtt.Client()
         self.client.on_message = self._on_message
         self.client.connect(broker, port)
