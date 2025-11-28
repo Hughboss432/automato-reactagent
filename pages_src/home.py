@@ -7,10 +7,10 @@ class HomePage:                                    # Home page
         # Campo de busca
         busca = st.text_input("Buscar produtos...", "")
 
-        st.divider()
-        st.subheader("Categories")
-        categories = ["Type1", "Type2", "Type3", "Type4"]
-        st.write(" | ".join(categories))
+        # st.divider()
+        # st.subheader("Categories")
+        # categories = ["Type1", "Type2", "Type3", "Type4"]
+        # st.write(" | ".join(categories))
 
         st.divider()
         st.subheader("Produtos")
