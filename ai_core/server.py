@@ -13,15 +13,14 @@ mcp = FastMCP(
 mqtt = MqttTool(broker="test.mosquitto.org") # mqtt publico de teste
 
 @mcp.tool()                                  # Publicar mensagem
-async def mqtt_publish(topic: str, message: str):
+async def mqtt_publish(message: str):
     """
     Docstring for mqtt_publish
     
-    :param topic: Topic used to post the MQTT message.
-    :type topic: str
     :param message: Message used to publish in the MQTT topic.
     :type message: str
     """
+    topic="meu/teste/helloworld"
     mqtt.publish(topic, message)
     return (f"Publicado em '{topic}': {message}")
 
